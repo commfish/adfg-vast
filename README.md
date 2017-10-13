@@ -19,12 +19,7 @@ Rtools allows you to access your computer's c++ compiler. Install the most recen
 
 For details: https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows 
 
-### STEP 3: map system path to Rtools in your environmental vars 
-From Start menu,  right click on 'Computer', select 'Properties', select 'Advanced system  settings', select 'Environment Variables'. Under 'System variables,' scoll down to 'PATH' (or 'Path'), highlight it and select 'Edit.' Scroll to end of listed paths, and add the following paths to end of existing list using a semicolon to separate paths: "; C:\Rtools\gcc-4.6.3\bin") **WARNING** do not delete existing paths, just add the new one to the end of the existing list.
-
-### STEP 4: restart R or Rstudio
-
-### STEP 5: install TMB
+### STEP 3: install TMB
 
 `install.packages("devtools")`
 `library(devtools)`
@@ -34,9 +29,11 @@ Once devtools is installed, run `install_github("kaskr/adcomp/TMB")`. **STOP** t
 `install_github("kaskr/adcomp/TMB")` **# Don't forget to hit the stop sign the first time!**
 `library(TMB)`
 
-### STEP 6: test your compiler 
+### STEP 4: test your compiler 
 In `rtools_setup.r`, we're using a simple linear mixed effects model example from https://github.com/James-Thorson/mixed-effects/tree/master/linear_mixed_model. 
 
-
+### Bonus step if that didn't work... 
+**Map system path to Rtools in your environmental vars**
+From Start menu,  right click on 'Computer', select 'Properties', select 'Advanced system  settings', select 'Environment Variables'. Under 'System variables,' scoll down to 'PATH' (or 'Path'), highlight it and select 'Edit.' Scroll to end of listed paths, and add the following paths to end of existing list using a semicolon to separate paths: "; C:\Rtools\gcc-4.6.3\bin") **WARNING** do not delete existing paths, just add the new one to the end of the existing list. Restart R or Rstudio before trying **STEP 3** again.
 
 
