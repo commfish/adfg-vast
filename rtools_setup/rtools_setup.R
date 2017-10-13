@@ -22,18 +22,12 @@ updateR()
 # https://cran.r-project.org/bin/windows/Rtools/
 # Default is to save directly to your C drive
 
-# map system path to Rtools in your environmental vars (from Start menu, 
-# right click on 'Computer', select 'Properties', select 'Advanced system 
-# settings', select 'Environment Variables'. Under 'System variables,' scoll 
-# down to 'PATH' (or 'Path'), highlight it and select 'Edit.' Scroll to end of 
-# listed paths, and add the following paths to end of existing list using a 
-# semicolon to separate paths: "; C:\Rtools\gcc-4.6.3\bin") **WARNING** do not
-# delete existing paths, just add the new one to the end of the existing list
 
-# Restart R or Rstudio. Install devtools, then run
-# 'install_github("kaskr/adcomp/TMB")'. STOP the operation when it starts
-# downloading Rtools.exe. You will receive an error msg saying it cancelled and didn't install properly.
-# Run the install_github() line again. 
+
+# Install devtools, then run 'install_github("kaskr/adcomp/TMB")'. STOP the
+# operation when it starts downloading Rtools.exe. You will receive an error msg
+# saying it cancelled and didn't install properly. Run the install_github() line
+# again.
 
 # debug(utils:::unpackPkgZip) #use within ADFG to slow down the devtools package
 # downloading process so the virus software can keep up (you may not need it)
@@ -46,6 +40,16 @@ library(TMB)
 
 Version = "linear_mixed_model"
 compile( paste0(Version,".cpp") )
+
+# BONUS STEPS if you're still not able to compile: map system path to Rtools in
+# your environmental vars (from Start menu, right click on 'Computer', select
+# 'Properties', select 'Advanced system settings', select 'Environment
+# Variables'. Under 'System variables,' scoll down to 'PATH' (or 'Path'),
+# highlight it and select 'Edit.' Scroll to end of listed paths, and add the
+# following paths to end of existing list using a semicolon to separate paths:
+# "; C:\Rtools\gcc-4.6.3\bin") **WARNING** do not delete existing paths, just
+# add the new one to the end of the existing list.  Restart R or Rstudio. 
+
 
 # Compare with lme4 ----
 
