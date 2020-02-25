@@ -1,5 +1,5 @@
 # notes ----
-## Data Preparation and test for VAST training
+## Data preparation and test for VAST training
 ## Westward Region large-mesh Tanner crab survey
 ## author: Tyler Jackson
 ## last updated 2020/2/24
